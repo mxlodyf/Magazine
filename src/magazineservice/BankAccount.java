@@ -1,6 +1,6 @@
 package magazineservice;
 
-public class BankAccount {
+public class BankAccount extends PaymentMethod {
 
     private String bsb;
     private String accountNumber;

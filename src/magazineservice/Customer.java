@@ -14,4 +14,37 @@ public class Customer {
         this.email = email;
         this.supplements = new ArrayList<>();
     }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public List<Supplement> getSupplements() {
+        return supplements;
+    }
+
+    public void addSupplement(Supplement supplement) {
+        if (!supplements.contains(supplement)) {
+            supplements.add(supplement);
+        }
+    }
+
+    public void removeSupplement(Supplement supplement) {
+        supplements.remove(supplement);
+    }
+
+    public String getCustomerType() {
+        return "Standard Customer";
+    }
+
+    @Override
+    public String toString() {
+        return getCustomerType() + " | Name: " + name + " | Email: " + email
+                + " | Supplements: " + supplements.size();
+    }
+
 }

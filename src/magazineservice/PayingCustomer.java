@@ -13,4 +13,9 @@ public class PayingCustomer extends Customer {
         this.paymentMethod = paymentMethod;
         this.associateCustomers = new ArrayList<>();
     }
+
+    @Override
+    public String getCustomerType() {
+        return "Paying Customer";
+    }
 }

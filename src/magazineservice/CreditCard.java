@@ -1,6 +1,6 @@
 package magazineservice;
 
-public class CreditCard {
+public class CreditCard extends PaymentMethod {
 
     private String cardNumber;
     private String expiryMonth;

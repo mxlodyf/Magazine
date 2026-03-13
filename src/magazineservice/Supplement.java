@@ -9,4 +9,8 @@ public class Supplement {
         this.name = name;
         this.weeklyCost = weeklyCost;
     }
+
+    public String getName() {
+        return name;
+    }
 }
