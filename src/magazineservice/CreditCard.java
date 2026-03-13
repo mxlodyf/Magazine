@@ -17,4 +17,17 @@ public class CreditCard extends PaymentMethod {
         this.expiryMonth = expiryMonth;
         this.cardHolderName = cardHolderName;
     }
+
+    @Override
+    public String getMethod() {
+        return "Credit Card";
+    }
+
+    @Override
+    public String getDescription() {
+        String last4 = cardNumber.length() >= 4
+                ? cardNumber.substring(cardNumber.length() - 4)
+                : cardNumber;
+        return "Credit Card ending in " + last4 + " (Holder: " + cardHolderName + ")";
+    }
 }

@@ -14,6 +14,29 @@ public class PayingCustomer extends Customer {
         this.associateCustomers = new ArrayList<>();
     }
 
+    public PaymentMethod getPaymentMethod() {
+        return paymentMethod;
+    }
+
+    public void setPaymentMethod(PaymentMethod paymentMethod) {
+        this.paymentMethod = paymentMethod;
+    }
+
+    public List<AssociateCustomer> getAssociateCustomers() {
+        return associateCustomers;
+    }
+
+    public void addAssociateCustomer(AssociateCustomer associate) {
+        if (!associateCustomers.contains(associate)) {
+            associateCustomers.add(associate);
+        }
+    }
+
+    public void removeAssociateCustomer(AssociateCustomer associate) {
+        associateCustomers.remove(associate);
+    }
+
+
     @Override
     public String getCustomerType() {
         return "Paying Customer";

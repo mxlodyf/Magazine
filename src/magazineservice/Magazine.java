@@ -21,6 +21,10 @@ public class Magazine {
         return availableSupplements;
     }
 
+    public List<Customer> getCustomers() {
+        return customers;
+    }
+
     public void addSupplement(Supplement supplement) {
         availableSupplements.add(supplement);
     }
@@ -29,6 +33,12 @@ public class Magazine {
         availableSupplements.remove(supplement);
         for (Customer c : customers) {
             c.removeSupplement(supplement);
+        }
+    }
+
+    public void addCustomer(Customer customer) {
+        if (!customers.contains(customer)) {
+            customers.add(customer);
         }
     }
 }

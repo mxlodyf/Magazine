@@ -11,4 +11,16 @@ public class BankAccount extends PaymentMethod {
         this.accountNumber = accountNumber;
         this.accountHolderName = accountHolderName;
     }
+
+    @Override
+    public String getMethod() {
+        return "Bank Account";
+    }
+
+    @Override
+    public String getDescription() {
+        return "Direct Debit from Bank Account BSB: " + bsb
+                + ", Account: " + accountNumber
+                + " (Holder: " + accountHolderName + ")";
+    }
 }
